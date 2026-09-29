@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Shake Torch</string>
+    <string name="tile_label">Shake to torch</string>
+    <string name="tile_on">Listening</string>
+    <string name="tile_off">Off</string>
+
+    <string name="channel_name">Shake listener</string>
+    <string name="channel_description">Shown while the app is listening for shakes</string>
+    <string name="notif_title">Shake to torch is active</string>
+    <string name="notif_text_on">Torch is ON · shake to turn off</string>
+    <string name="notif_text_off">Shake your phone to turn on the torch</string>
+    <string name="action_turn_on">Turn torch on</string>
+    <string name="action_turn_off">Turn torch off</string>
+    <string name="action_stop">Stop listening</string>
+</resources>
