@@ -65,7 +65,7 @@ shake-to-torch/
     └── src/
         ├── main/
         │   ├── AndroidManifest.xml
-        │   ├── java/com/abhinav/shaketorch/
+        │   ├── java/com/saiabhinavgandesree/shaketorch/
         │   │   ├── MainActivity.kt
         │   │   ├── core/        # ShakeDetector, TorchController, Prefs
         │   │   ├── service/     # ShakeService, ShakeTileService, BootReceiver

@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.core
+package com.saiabhinavgandesree.shaketorch.core
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

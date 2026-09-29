@@ -1,6 +1,6 @@
 # 04 · Controlling the flashlight
 
-Code: `app/src/main/java/com/abhinav/shaketorch/core/TorchController.kt`
+Code: `app/src/main/java/com/saiabhinavgandesree/shaketorch/core/TorchController.kt`
 
 ## 1. The flashlight belongs to the camera
 

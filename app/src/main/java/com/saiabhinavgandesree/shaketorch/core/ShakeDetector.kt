@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.core
+package com.saiabhinavgandesree.shaketorch.core
 
 import kotlin.math.max
 import kotlin.math.sqrt

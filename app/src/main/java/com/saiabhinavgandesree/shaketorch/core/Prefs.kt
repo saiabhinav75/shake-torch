@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.core
+package com.saiabhinavgandesree.shaketorch.core
 
 import android.content.Context
 import android.content.SharedPreferences

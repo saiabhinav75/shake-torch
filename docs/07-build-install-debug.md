@@ -67,7 +67,7 @@ allow "Install unknown apps" for that file manager when asked.
 
 > **Signatures:** debug builds use the debug key, and release builds use your upload key (`keystore/`). Android refuses
 > to update an app signed with a different key, so to switch between a debug and a release install, run
-> `adb uninstall com.abhinav.shaketorch` first. Once the app is on Play, installs from Play are signed with
+> `adb uninstall com.saiabhinavgandesree.shaketorch` first. Once the app is on Play, installs from Play are signed with
 > Google's key, so uninstall before sideloading your own build over them.
 
 ## First-run checklist on the A37
@@ -93,7 +93,7 @@ adb logcat -s TorchController BootReceiver AndroidRuntime
 
 ```bash
 # is the service running?
-adb shell dumpsys activity services com.abhinav.shaketorch
+adb shell dumpsys activity services com.saiabhinavgandesree.shaketorch
 
 # is our wake lock held (screen off)?
 adb shell dumpsys power | grep ShakeTorch
@@ -102,13 +102,13 @@ adb shell dumpsys power | grep ShakeTorch
 adb shell dumpsys sensorservice | grep -A2 shaketorch
 
 # simulate a reboot broadcast without rebooting (tests BootReceiver)
-adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -p com.abhinav.shaketorch
+adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -p com.saiabhinavgandesree.shaketorch
 
 # force-stop, as if Samsung killed it
-adb shell am force-stop com.abhinav.shaketorch
+adb shell am force-stop com.saiabhinavgandesree.shaketorch
 
 # uninstall
-adb uninstall com.abhinav.shaketorch
+adb uninstall com.saiabhinavgandesree.shaketorch
 ```
 
 ## Emulator
@@ -130,7 +130,7 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 | Stops working after a few hours | Samsung "Deep sleeping apps"; set battery to **Unrestricted** |
 | Shake does nothing, no vibration, notification visible | Camera app or a video call is using the flash; check `adb logcat -s TorchController` |
 | No notification at all | Notifications denied: *Settings → Apps → Shake Torch → Notifications*. The service still runs |
-| `INSTALL_FAILED_UPDATE_INCOMPATIBLE` | Signature mismatch: `adb uninstall com.abhinav.shaketorch` and install again |
+| `INSTALL_FAILED_UPDATE_INCOMPATIBLE` | Signature mismatch: `adb uninstall com.saiabhinavgandesree.shaketorch` and install again |
 | Gradle: "SDK location not found" | `local.properties` is missing: `echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties` |
 
 Next: [08-customize.md](08-customize.md)

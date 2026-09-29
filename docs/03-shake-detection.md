@@ -1,7 +1,7 @@
 # 03 · Shake detection: sensors, physics and the algorithm
 
-Code: `app/src/main/java/com/abhinav/shaketorch/core/ShakeDetector.kt`
-Tests: `app/src/test/java/com/abhinav/shaketorch/core/ShakeDetectorTest.kt`
+Code: `app/src/main/java/com/saiabhinavgandesree/shaketorch/core/ShakeDetector.kt`
+Tests: `app/src/test/java/com/saiabhinavgandesree/shaketorch/core/ShakeDetectorTest.kt`
 
 ## 1. What the accelerometer measures
 

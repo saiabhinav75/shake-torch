@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.service
+package com.saiabhinavgandesree.shaketorch.service
 
 import android.annotation.SuppressLint
 import android.app.ForegroundServiceStartNotAllowedException
@@ -7,9 +7,9 @@ import android.content.Intent
 import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
-import com.abhinav.shaketorch.MainActivity
-import com.abhinav.shaketorch.R
-import com.abhinav.shaketorch.core.Prefs
+import com.saiabhinavgandesree.shaketorch.MainActivity
+import com.saiabhinavgandesree.shaketorch.R
+import com.saiabhinavgandesree.shaketorch.core.Prefs
 
 /** Quick Settings tile that turns shake listening on/off (not the torch itself). */
 class ShakeTileService : TileService() {

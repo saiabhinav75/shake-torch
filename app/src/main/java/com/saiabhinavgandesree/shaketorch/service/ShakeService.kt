@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.service
+package com.saiabhinavgandesree.shaketorch.service
 
 import android.annotation.SuppressLint
 import android.app.Notification
@@ -25,11 +25,11 @@ import android.os.VibrationEffect
 import android.os.VibratorManager
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
-import com.abhinav.shaketorch.MainActivity
-import com.abhinav.shaketorch.R
-import com.abhinav.shaketorch.core.Prefs
-import com.abhinav.shaketorch.core.ShakeDetector
-import com.abhinav.shaketorch.core.TorchController
+import com.saiabhinavgandesree.shaketorch.MainActivity
+import com.saiabhinavgandesree.shaketorch.R
+import com.saiabhinavgandesree.shaketorch.core.Prefs
+import com.saiabhinavgandesree.shaketorch.core.ShakeDetector
+import com.saiabhinavgandesree.shaketorch.core.TorchController
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -243,8 +243,8 @@ class ShakeService : Service(), SensorEventListener,
     private fun serviceIntent(action: String) = Intent(this, ShakeService::class.java).setAction(action)
 
     companion object {
-        const val ACTION_TOGGLE_TORCH = "com.abhinav.shaketorch.action.TOGGLE_TORCH"
-        const val ACTION_STOP = "com.abhinav.shaketorch.action.STOP"
+        const val ACTION_TOGGLE_TORCH = "com.saiabhinavgandesree.shaketorch.action.TOGGLE_TORCH"
+        const val ACTION_STOP = "com.saiabhinavgandesree.shaketorch.action.STOP"
         private const val CHANNEL_ID = "shake_listener"
         private const val NOTIFICATION_ID = 1
 

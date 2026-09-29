@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#34459A"/>
+      <stop offset="0.55" stop-color="#1E2A5A"/>
+      <stop offset="1" stop-color="#121936"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFE082" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFE082" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFD54F" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FFD54F" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- light beam -->
+  <ellipse cx="256" cy="150" rx="170" ry="110" fill="url(#glow)"/>
+  <path d="M178,170 L334,170 L420,30 L92,30 Z" fill="url(#beam)"/>
+
+  <!-- flashlight (Material flashlight_on, 24-unit grid scaled ×13) -->
+  <g transform="translate(100,144) scale(13)" filter="url(#shadow)">
+    <path fill="#FFFFFF" d="M6,2h12v3H6zM6,7v1l2,3v11h8V11l2,-3V7H6z"/>
+    <circle cx="12" cy="14.5" r="1.7" fill="#FFD54F"/>
+  </g>
+
+  <!-- shake marks -->
+  <g fill="none" stroke="#FFD54F" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150,270 L122,316 L150,362"/>
+    <path d="M362,270 L390,316 L362,362"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104,282 L82,316 L104,350"/>
+    <path d="M408,282 L430,316 L408,350"/>
+  </g>
+</svg>

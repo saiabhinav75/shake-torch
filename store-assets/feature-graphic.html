@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feature graphic</title>
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1024px; height: 500px; overflow: hidden;
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(120deg, #121936 0%, #1E2A5A 55%, #2E3D86 100%);
+    position: relative; color: #fff;
+  }
+  .glow {
+    position: absolute; left: 70px; top: -60px; width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(255, 213, 79, 0.35) 0%, rgba(255, 213, 79, 0) 65%);
+  }
+  svg.art { position: absolute; left: 60px; top: 0; }
+  .text { position: absolute; left: 470px; top: 136px; right: 40px; }
+  h1 { margin: 0; white-space: nowrap; font-size: 80px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
+  .tag { margin-top: 16px; font-size: 31px; font-weight: 500; color: #FFE082; line-height: 1.2; }
+  .chips { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .chip {
+    font-size: 19px; font-weight: 600; padding: 8px 16px; border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.35); color: rgba(255, 255, 255, 0.92);
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <svg class="art" width="400" height="500" viewBox="0 0 400 500">
+    <defs>
+      <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#FFE082" stop-opacity="0.8"/>
+        <stop offset="1" stop-color="#FFE082" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/>
+      </filter>
+    </defs>
+    <path d="M122,178 L278,178 L380,0 L20,0 Z" fill="url(#beam)"/>
+    <g transform="translate(44,152) scale(13)" filter="url(#shadow)">
+      <path fill="#FFFFFF" d="M6,2h12v3H6zM6,7v1l2,3v11h8V11l2,-3V7H6z"/>
+      <circle cx="12" cy="14.5" r="1.7" fill="#FFD54F"/>
+    </g>
+    <g fill="none" stroke="#FFD54F" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M94,280 L66,326 L94,372"/>
+      <path d="M306,280 L334,326 L306,372"/>
+    </g>
+    <g fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M48,292 L26,326 L48,360"/>
+      <path d="M352,292 L374,326 L352,360"/>
+    </g>
+  </svg>
+  <div class="text">
+    <h1>Shake Torch</h1>
+    <div class="tag">Shake your phone to toggle the flashlight</div>
+    <div class="chips">
+      <span class="chip">No ads</span>
+      <span class="chip">Fully customizable</span>
+      <span class="chip">Works with screen off</span>
+    </div>
+  </div>
+</body>
+</html>

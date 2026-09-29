@@ -76,7 +76,7 @@ ShakeDetector.Config(thresholdG = 2.5f, shakesRequired = 2)
 ```kotlin
 class ShakeService : Service() {
     companion object {
-        const val ACTION_STOP = "com.abhinav.shaketorch.action.STOP"
+        const val ACTION_STOP = "com.saiabhinavgandesree.shaketorch.action.STOP"
         fun start(context: Context) { ... }
     }
 }

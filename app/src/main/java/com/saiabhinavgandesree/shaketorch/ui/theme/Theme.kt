@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.ui.theme
+package com.saiabhinavgandesree.shaketorch.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

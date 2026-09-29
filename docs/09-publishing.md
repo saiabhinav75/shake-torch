@@ -58,7 +58,7 @@ Play uses **two** keys:
 | Free or paid | Free (**permanent**: a free app can never become paid) |
 
 The package name is **not** typed here. Play reads it from your first uploaded bundle:
-`com.abhinav.shaketorch`, and it can never change afterwards.
+`com.saiabhinavgandesree.shaketorch`, and it can never change afterwards.
 
 ### App content (Policy → App content)
 | Section | Answer |
@@ -81,8 +81,21 @@ The package name is **not** typed here. Play reads it from your first uploaded b
 | Feature graphic | 1024×500 PNG/JPG |
 | Phone screenshots | 2–8, at least 1080 px on the short side |
 
-The launcher icon is a vector. To export a 512×512 PNG, open the project in Android Studio →
-right-click `res` → New → Image Asset, or screenshot the icon in a design tool.
+Ready-made assets are in `store-assets/`: `icon-512.png` and `feature-graphic-1024x500.jpg`.
+Their sources are `icon.svg` and `feature-graphic.html`. After editing a source, re-render it with headless Chrome:
+
+```bash
+cd store-assets
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+"$CHROME" --headless=new --hide-scrollbars --force-device-scale-factor=1 \
+  --window-size=512,512 --screenshot="$PWD/icon-512.png" "file://$PWD/icon.svg"
+"$CHROME" --headless=new --hide-scrollbars --force-device-scale-factor=1 \
+  --window-size=1024,500 --screenshot="$PWD/fg.png" "file://$PWD/feature-graphic.html"
+sips -s format jpeg fg.png --out feature-graphic-1024x500.jpg && rm fg.png
+```
+
+Chrome saves a 24-bit PNG. If Play asks for a 32-bit icon, add an alpha channel with Pillow:
+`python -c "from PIL import Image; Image.open('icon-512.png').convert('RGBA').save('icon-512.png')"`.
 
 ### Testing before production (new personal accounts)
 

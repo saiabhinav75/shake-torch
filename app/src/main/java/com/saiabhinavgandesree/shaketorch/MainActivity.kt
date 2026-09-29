@@ -1,14 +1,14 @@
-package com.abhinav.shaketorch
+package com.saiabhinavgandesree.shaketorch
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.abhinav.shaketorch.core.Prefs
-import com.abhinav.shaketorch.core.TorchController
-import com.abhinav.shaketorch.service.ShakeService
-import com.abhinav.shaketorch.ui.SettingsScreen
-import com.abhinav.shaketorch.ui.theme.ShakeTorchTheme
+import com.saiabhinavgandesree.shaketorch.core.Prefs
+import com.saiabhinavgandesree.shaketorch.core.TorchController
+import com.saiabhinavgandesree.shaketorch.service.ShakeService
+import com.saiabhinavgandesree.shaketorch.ui.SettingsScreen
+import com.saiabhinavgandesree.shaketorch.ui.theme.ShakeTorchTheme
 
 class MainActivity : ComponentActivity() {
 

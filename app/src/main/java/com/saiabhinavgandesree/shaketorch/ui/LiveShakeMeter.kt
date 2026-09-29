@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.ui
+package com.saiabhinavgandesree.shaketorch.ui
 
 import android.content.Context
 import android.hardware.Sensor
@@ -30,7 +30,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.abhinav.shaketorch.core.ShakeDetector
+import com.saiabhinavgandesree.shaketorch.core.ShakeDetector
 import kotlinx.coroutines.delay
 
 private const val METER_MAX_G = 6f

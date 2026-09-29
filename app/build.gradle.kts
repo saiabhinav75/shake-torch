@@ -11,11 +11,11 @@ val keystoreProps = rootProject.file("keystore/keystore.properties").takeIf { it
 }
 
 android {
-    namespace = "com.abhinav.shaketorch"
+    namespace = "com.saiabhinavgandesree.shaketorch"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.abhinav.shaketorch"
+        applicationId = "com.saiabhinavgandesree.shaketorch"
         minSdk = 31
         targetSdk = 36
         versionCode = 1

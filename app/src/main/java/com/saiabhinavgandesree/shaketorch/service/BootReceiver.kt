@@ -1,10 +1,10 @@
-package com.abhinav.shaketorch.service
+package com.saiabhinavgandesree.shaketorch.service
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.abhinav.shaketorch.core.Prefs
+import com.saiabhinavgandesree.shaketorch.core.Prefs
 
 /** Restarts listening after a reboot or an app update, if the user had it switched on. */
 class BootReceiver : BroadcastReceiver() {

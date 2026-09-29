@@ -1,4 +1,4 @@
-package com.abhinav.shaketorch.ui
+package com.saiabhinavgandesree.shaketorch.ui
 
 import android.Manifest
 import android.content.Context
@@ -47,10 +47,10 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.abhinav.shaketorch.R
-import com.abhinav.shaketorch.core.Prefs
-import com.abhinav.shaketorch.core.TorchController
-import com.abhinav.shaketorch.service.ShakeService
+import com.saiabhinavgandesree.shaketorch.R
+import com.saiabhinavgandesree.shaketorch.core.Prefs
+import com.saiabhinavgandesree.shaketorch.core.TorchController
+import com.saiabhinavgandesree.shaketorch.service.ShakeService
 import kotlin.math.roundToInt
 
 private val AUTO_OFF_OPTIONS = listOf(0, 1, 2, 5, 10, 15, 30)
