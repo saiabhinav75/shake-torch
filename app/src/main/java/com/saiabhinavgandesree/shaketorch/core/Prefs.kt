@@ -22,6 +22,9 @@ class Prefs(context: Context) {
     /** Torch brightness level; 0 means "use the device default". */
     var strengthLevel by int(KEY_STRENGTH, 0)
 
+    var shakeToggleCount by int(KEY_TOGGLE_COUNT, 0)
+    var reviewRequested by boolean(KEY_REVIEW_REQUESTED, false)
+
     fun detectorConfig() = ShakeDetector.Config.fromSettings(thresholdG, shakesRequired, cooldownMs)
 
     private fun boolean(key: String, default: Boolean) = object : ReadWriteProperty<Any, Boolean> {
@@ -51,5 +54,7 @@ class Prefs(context: Context) {
         const val KEY_VIBRATE = "vibrate"
         const val KEY_AUTO_OFF = "auto_off_minutes"
         const val KEY_STRENGTH = "strength_level"
+        const val KEY_TOGGLE_COUNT = "shake_toggle_count"
+        const val KEY_REVIEW_REQUESTED = "review_requested"
     }
 }

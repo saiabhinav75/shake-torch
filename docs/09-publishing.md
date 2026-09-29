@@ -108,7 +108,24 @@ opted in for 14 continuous days** before they can apply for production access.
 
 (Organization accounts skip this, going through Internal testing → Production directly.)
 
-## 5. Releasing updates
+## 5. Ratings
+
+`RatingPrompt.kt` uses Google Play's **In-App Review API** (`com.google.android.play:review-ktx`):
+
+- `ShakeService` counts successful shake toggles in `Prefs.shakeToggleCount`.
+- When the app opens (`MainActivity.onResume`) with 10 or more toggles, it asks Play to show the rating sheet,
+  once (`Prefs.reviewRequested`).
+- **Play decides whether the sheet actually appears.** It enforces a quota, never tells the app whether the user rated,
+  and doesn't show the sheet at all for apps that weren't installed from Play. So there's also a permanent
+  *"Rate it on Google Play"* button at the bottom of the settings screen that opens the store page.
+- To test the real sheet, install the app from an **internal testing** track or via *internal app sharing*.
+  A sideloaded build never shows it.
+
+The library talks to the Play Store app on the phone, so Shake Torch still has **no INTERNET permission**.
+F-Droid doesn't accept apps that include Google's closed-source Play libraries, though. Publishing there
+would need a separate build variant without this dependency.
+
+## 6. Releasing updates
 
 1. Bump `versionCode` (must increase every upload) and `versionName` in `app/build.gradle.kts`:
    ```kotlin

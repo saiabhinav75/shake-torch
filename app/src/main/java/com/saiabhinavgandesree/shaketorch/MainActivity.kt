@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
         super.onResume()
         // Recover if the system (or Samsung's battery manager) killed the service.
         if (prefs.enabled && !ShakeService.isRunning.value) ShakeService.start(this)
+        RatingPrompt.maybeAsk(this, prefs)
     }
 
     override fun onStop() {

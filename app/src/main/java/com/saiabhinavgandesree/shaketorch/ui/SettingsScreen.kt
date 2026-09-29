@@ -31,6 +31,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -48,6 +49,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.saiabhinavgandesree.shaketorch.R
+import com.saiabhinavgandesree.shaketorch.RatingPrompt
 import com.saiabhinavgandesree.shaketorch.core.Prefs
 import com.saiabhinavgandesree.shaketorch.core.TorchController
 import com.saiabhinavgandesree.shaketorch.service.ShakeService
@@ -238,6 +240,11 @@ fun SettingsScreen(prefs: Prefs, torch: TorchController) {
                     )
                 }
             }
+
+            TextButton(
+                onClick = { RatingPrompt.openStorePage(context) },
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+            ) { Text("Enjoying Shake Torch? Rate it on Google Play") }
 
             Spacer(Modifier.height(24.dp))
         }

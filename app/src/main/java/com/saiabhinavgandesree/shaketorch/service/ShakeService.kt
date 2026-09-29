@@ -130,6 +130,7 @@ class ShakeService : Service(), SensorEventListener,
     private fun onShake() {
         val newState = torch.toggle(prefs.strengthLevel) ?: return
         if (prefs.vibrate) vibrate(newState)
+        prefs.shakeToggleCount++
     }
 
     private fun onTorchChanged(on: Boolean) {

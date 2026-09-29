@@ -15,6 +15,8 @@ Shake Torch ("the app") lets you toggle your phone's flashlight by shaking the d
 - Your settings (shake sensitivity, cooldown, etc.) are stored locally on your device and are removed
   when you uninstall the app.
 - The app contains no ads, analytics, or third-party tracking SDKs.
+- The app may ask you to rate it using Google Play's built-in rating sheet. That sheet is shown by the
+  Google Play Store app; Shake Torch never sees whether or how you rated.
 
 ## Permissions
 

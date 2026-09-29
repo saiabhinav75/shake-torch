@@ -24,5 +24,7 @@ Standalone Kotlin app. Injecting into One UI's *Motions and gestures* isn't poss
 - [ ] Host privacy policy, record FGS demo video, closed test (12 testers × 14 days)
 - [ ] Verify on the physical A37 (gesture feel, screen-off reliability, brightness levels)
 
+- [x] v1.1 (2): MIT license, Play in-app rating prompt + Rate button
+
 ## Ideas backlog
 See docs/08-customize.md (pocket protection, chop gesture, SOS strobe, wake-up sensor).

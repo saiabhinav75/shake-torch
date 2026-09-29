@@ -1,6 +1,7 @@
 # Shake Torch
 
 Shake your phone to toggle the flashlight. No ads, no tracking, no internet permission. Everything is tunable.
+Open source under the [MIT License](LICENSE).
 
 Built for a Samsung Galaxy A37 (One UI / Android 16), and works on any Android 12+ phone with a flash.
 
@@ -17,6 +18,7 @@ Built for a Samsung Galaxy A37 (One UI / Android 16), and works on any Android 1
 | Quick Settings tile to turn listening on/off | `service/ShakeTileService.kt` |
 | Notification with Torch on/off and Stop buttons | `service/ShakeService.kt` |
 | Restarts after a reboot or app update | `service/BootReceiver.kt` |
+| Google Play rating prompt (once, after 10 shake toggles) + "Rate" button | `RatingPrompt.kt` |
 
 ## Why an app and not a One UI gesture?
 
