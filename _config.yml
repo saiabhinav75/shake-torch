@@ -1,0 +1,12 @@
+# GitHub Pages: publish only README (home page) and PRIVACY_POLICY.
+title: Shake Torch
+description: Shake your phone to toggle the flashlight. No ads, no tracking.
+exclude:
+  - app/
+  - gradle/
+  - docs/
+  - gradlew
+  - gradlew.bat
+  - "*.kts"
+  - gradle.properties
+  - plan.md
